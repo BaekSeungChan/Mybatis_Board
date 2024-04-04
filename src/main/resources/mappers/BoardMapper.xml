@@ -4,23 +4,32 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kosa.mini.board.mapper.BoardMapper">
 
-    <select id="list" resultType="">
+    <select id="boardInsert" resultType="org.kosa.mini.board.domain.BoardVO">
+        insert into boards (title, content, writer, dueDate,userid) values (?, ?, ?, ?,?)
+    </select>
+
+    <select id="boardFindAll" resultType="org.kosa.mini.board.domain.BoardVO">
         select 
         	* 
         from boards
     </select>
 
-	<select id="read" resultType="">
-		select 
-			* 
-		from boards 
-		where bno = #{bno}
-	</select>
-	
-	<delete id="delete" >
-		delete 
-		from boards 
-		where bno = #{bno}
-	</delete>
-    
+
+    <select id="boardSearch" resultType="org.kosa.mini.board.domain.BoardVO">
+        select * from boards where title like ?
+    </select>
+
+    <select id="boardDetail" resultType="org.kosa.mini.board.domain.BoardVO">
+        select * from boards where id = ?
+    </select>
+
+    <select id="boardDelete" resultType="org.kosa.mini.board.domain.BoardVO">
+        delete from boards where id = ?
+    </select>
+
+    <select id="boardUpdate" resultType="org.kosa.mini.board.domain.BoardVO">
+        update boards set title = ? , content = ?, dueDate = ? where id = ?
+    </select>
+
+
 </mapper>
