@@ -23,6 +23,11 @@ public class BoardController {
         return "list";
     }
 
+    @GetMapping("/insertForm")
+    public String insertForm() throws Exception {
+        return "insertForm";
+    }
+
 
 
 }

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="css/board/list.css" rel="stylesheet">
+    <link href="/resources/css/board/list.css" rel="stylesheet">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 
 <div class="container mt-5">
     <div class="write-button text-right">
-        <a href="/board.do?action=insertForm" class="btn btn-secondary" style="margin-bottom: 10px">글쓰기</a>
+        <a href="/board/insertForm" class="btn btn-secondary" style="margin-bottom: 10px">글쓰기</a>
     </div>
     <div class="row" style="margin-bottom: 10px">
         <div class="col-2 bg-dark-gray text-center">ID</div>
